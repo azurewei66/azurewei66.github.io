@@ -18,7 +18,7 @@ useradd 选项 用户名
 -u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。
 用户名:指定新账号的登录名
 Example:
-useradd –d  /home/sekiro -s /bin/sh -m sekiro
+useradd -d /home/sekiro -s /bin/sh -m sekiro
     新建sekiro用户，用户目录在/home/sekiro,登录方式为 sh
 //修改密码
     passwd
