@@ -29,7 +29,7 @@
 <meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
-</head>
+<script src="/assets/js/DPlayer.min.js"></script></head>
 
 
 <body>
@@ -158,27 +158,29 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="插入音视频"><a href="#插入音视频" class="headerlink" title="插入音视频"></a>插入音视频</h1><h2 id="插入音频"><a href="#插入音频" class="headerlink" title="插入音频"></a>插入音频</h2><h3 id="1-直接使用音乐平台生成的插件外链"><a href="#1-直接使用音乐平台生成的插件外链" class="headerlink" title="1. 直接使用音乐平台生成的插件外链"></a>1. 直接使用音乐平台生成的插件外链</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=478507889&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">其中478507889为网易云音乐平台该歌曲的id</span><br></pre></td></tr></table></figure>
+            <h1 id="插入音视频"><a href="#插入音视频" class="headerlink" title="插入音视频"></a>插入音视频</h1><h2 id="插入音频"><a href="#插入音频" class="headerlink" title="插入音频"></a>插入音频</h2><h3 id="1-直接使用音乐平台生成的插件外链"><a href="#1-直接使用音乐平台生成的插件外链" class="headerlink" title="1. 直接使用音乐平台生成的插件外链"></a>1. 直接使用音乐平台生成的插件外链</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=478507889&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">其中478507889为网易云音乐平台该歌曲的id</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-   <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=478507889&auto=1&height=66"></iframe>
+   <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=340 height=86 src="//music.163.com/outchain/player?type=2&id=478507889&auto=0&height=66"></iframe>
 
 
 
 <h3 id="2-使用插件-hexo-tag-aplayer"><a href="#2-使用插件-hexo-tag-aplayer" class="headerlink" title="2. 使用插件 hexo-tag-aplayer"></a>2. 使用插件 hexo-tag-aplayer</h3><p>   安装</p>
    <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
 
-<p>   MeingJS 支持 (3.0 新功能)</p>
-<p>   <a class="link"   target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS" >MetingJS<i class="fas fa-external-link-alt"></i></a> 是基于<a class="link"   target="_blank" rel="noopener" href="https://github.com/metowolf/Meting" >Meting API<i class="fas fa-external-link-alt"></i></a> 的 APlayer 衍生播放器，引入 MetingJS 后，播放器将支持对于 QQ音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放。</p>
-<p>   如果想在本插件中使用 MetingJS，请在 Hexo 配置文件 <code>_config.yml</code> 中设置：</p>
-   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><p>使用MeingJS 支持 (3.0 新功能)的音乐</p>
+<p> <a class="link"   target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS" >MetingJS<i class="fas fa-external-link-alt"></i></a> 是基于<a class="link"   target="_blank" rel="noopener" href="https://github.com/metowolf/Meting" >Meting API<i class="fas fa-external-link-alt"></i></a> 的 APlayer 衍生播放器，引入 MetingJS 后，播放器将支持对于 QQ音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放。</p>
+<p> 如果想在本插件中使用 MetingJS，请在 Hexo 配置文件 <code>_config.yml</code> 中设置：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></li>
+</ul>
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;441722&quot; &quot;netease&quot; &quot;song&quot; &quot;autoplay&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:none&quot; &quot;theme:#ad7a86&quot;%&#125;</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
 
-    <div id="aplayer-XUGrdzLu" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-gMoqZQrU" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="441722" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"
     ></div>
 
@@ -275,8 +277,16 @@
 <td>播放器风格色彩设置</td>
 </tr>
 </tbody></table>
-<h3 id="3-参考"><a href="#3-参考" class="headerlink" title="3. 参考"></a>3. 参考</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" >hexo-tag-aplayer<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h2>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" >hexo-tag-aplayer<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h2><h3 id="1-插入外链"><a href="#1-插入外链" class="headerlink" title="1.插入外链"></a>1.插入外链</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe height=500 width=600 src=&quot;//player.bilibili.com/player.html?aid=925164961&amp;bvid=BV1KT4y1G7Mv&amp;cid=175525923&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<iframe height=500 width=600 src="//player.bilibili.com/player.html?aid=925164961&bvid=BV1KT4y1G7Mv&cid=175525923&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+
+<h3 id="2-使用-hexo-tag-dplayer-插件"><a href="#2-使用-hexo-tag-dplayer-插件" class="headerlink" title="2.使用 hexo-tag-dplayer 插件"></a>2.使用 hexo-tag-dplayer 插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;%     dplayer         &quot;url=/resources/video/ELDEN EING 星星时代.mp4&quot;  //设置视频目录，这里我放在了网站根目录下面，也就是public目录下面     &quot;pic=/resources/images/scenery_three.jpeg&quot; //设置封面图，同样是放在根目录下面     &quot;loop=yes&quot;  //循环播放    &quot;theme=#FADFA3&quot;   //主题    &quot;autoplay=true&quot;  //自动播放    &quot;screenshot=true&quot; //允许截屏    &quot;hotkey=true&quot; //允许hotKey，比如点击空格暂停视频等操作    &quot;preload=auto&quot; //预加载：auto    &quot;volume=0.9&quot;  //初始音量    &quot;playbackSpeed=1&quot;//播放速度1倍速，可以选择1.5,2等    &quot;lang=zh-cn&quot;//语言    &quot;mutex=true&quot;//播放互斥，就比如其他视频播放就会导致这个视频自动暂停    //下面是弹幕相关    &quot;id=9E2E3368B56CD123BB4&quot;    &quot;api=https://api.prprpr.me/dplayer/&quot;    &quot;token=tokendemo&quot;    &quot;maximum=1000&quot;    &quot;addition=[&#x27;https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142&#x27;]&quot;    &quot;user=DIYgod&quot;    &quot;bottom=15%&quot;    &quot;unlimited=true&quot;%&#125;</span><br></pre></td></tr></table></figure>
+
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"lang":"zh-cn//语言","screenshot":true,"hotkey":true,"preload":"auto","volume":0.9,"video":{"url":"/resources/video/ELDEN EING 星星时代.mp4","pic":"/resources/images/wallhaven-pkpq23.jpg"},"danmaku":{"id":"9E2E3368B56CD123BB4","api":"https://api.prprpr.me/dplayer/","token":"tokendemo","maximum":1000,"addition":["['https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142']"]}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
         </div>
 
         
